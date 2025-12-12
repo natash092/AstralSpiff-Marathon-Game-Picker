@@ -116,6 +116,16 @@ canvas {
     height: 100%;
 }
 
+#game-buttons {
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+}
+
+#game-button-template {
+	display: none;
+}
+
 .game {
     border-style: dashed;
     border-color: green;
@@ -125,25 +135,45 @@ canvas {
     padding: 2px;
     z-index: 2;
     position: relative;
-    /* height: 2vh; */
 }
-    .game p {
-        flex: 1 1 auto;
-        /* height: 2vh; */
+
+.game-button {
+    border-style: solid;
+    border-color: green;
+    border-width: 1px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2px;
+    z-index: 2;
+    position: relative;
+}
+
+.game p {
+	flex: 1 1 auto;
         vertical-align: middle;
         margin: 0;
-		padding-right: 2rem;
+	padding-right: 2rem;
         color: lime;
         font-family: ocr-a-std, monospace;
-    }
+}
 
-    .game-checkbox {
+.game-button p {
+	flex: 1 1 auto;
         vertical-align: middle;
-		flex: 0 0 2vh;
+        margin: 0;
+        color: lime;
+        font-family: ocr-a-std, monospace;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.game-checkbox {
+        vertical-align: middle;
+	flex: 0 0 2vh;
         width: 2vh;
         height: 2vh;
         cursor: pointer;
-    }
+}
 
 #result-screen-center {
     position: absolute;

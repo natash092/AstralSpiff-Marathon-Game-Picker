@@ -70,6 +70,16 @@ const gameLogos = [
     "game-thumbnails/024-five-laps-at-freddys.png"
 ];
 
+const presetNames = [
+    "Marathon 5",
+    "Fangame Marathon 1"
+];
+
+const presets = [
+    [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
+    [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+];
+
 var gameInPool = Array(gameNames.length).fill(false);
 
 
@@ -286,6 +296,7 @@ var tabletImageIndex = 1;
 var tabletOpen = false;
 
 var innerTablet = document.getElementById('inner-tablet');
+var gameButtons = document.getElementById('game-buttons');
 var checkIndex = 0;
 gameNames.forEach((val) => {
 
@@ -322,6 +333,15 @@ gameNames.forEach((val) => {
             checkbox.src = "public/checkbox-on.png";
         }
     };
+});
+
+presetNames.forEach((val) => {
+    var template = document.getElementById("game-button-template");
+    var clone = template.cloneNode(true);
+    clone.id = val;
+    gameButtons.appendChild(clone);
+    clone.style.visibility = "inherit";
+    clone.getElementsByClassName("game-name")[0].innerText = val;
 });
 
 var removeButton = document.getElementById('remove-button');
