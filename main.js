@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 
+var fangameIndex = 24;
+
 const gameNames = [
     "FNAF 1",
     "FNAF 2",
@@ -25,7 +27,20 @@ const gameNames = [
     "Freddy in Space 3",
     "Help Wanted 2",
     "Into The Pit",
-    "Five Laps at Freddy's"
+    "Five Laps at Freddy's",
+
+    "JR's",
+    "Glitched Attraction",
+    "Joy of Creation",
+    "A Bite at Freddy's",
+    "Chica's Party World",
+    "Five Nights at Flumpty's",
+    "Playtime at Percy's",
+    "Five Nights at Candy's 1 Remake",
+    "SCP: Endurance",
+    "Oblitus Casa",
+    "Tealerland",
+    "Wario's 3"
 ];
 
 const gameLogos = [
@@ -55,7 +70,7 @@ const gameLogos = [
     "game-thumbnails/024-five-laps-at-freddys.png"
 ];
 
-var gameInPool = Array(gameNames.length).fill(true);
+var gameInPool = Array(gameNames.length).fill(false);
 
 
 const scene = new THREE.Scene();
@@ -271,7 +286,19 @@ var tabletImageIndex = 1;
 var tabletOpen = false;
 
 var innerTablet = document.getElementById('inner-tablet');
+var checkIndex = 0;
 gameNames.forEach((val) => {
+
+    if (checkIndex == fangameIndex)
+    {
+        var template = document.getElementById("game-template");
+        var clone = template.cloneNode(true);
+        innerTablet.appendChild(clone);
+        clone.style.visibility = "hidden";
+    }
+
+    checkIndex++;
+
     var template = document.getElementById("game-template");
     var clone = template.cloneNode(true);
     clone.id = val;
@@ -280,6 +307,7 @@ gameNames.forEach((val) => {
     clone.getElementsByClassName("game-name")[0].innerText = val;
 
     var checkbox = clone.getElementsByClassName("game-checkbox")[0];
+    checkbox.src = "public/checkbox-off.png";
 
     checkbox.onclick = function(event) {
 
