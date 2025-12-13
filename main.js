@@ -434,6 +434,15 @@ function buttonPressed(remove) {
     document.getElementById('result-screen').style.visibility = "hidden";
 }
 
+const tablet = document.getElementById('tablet');
+const tabletFrames = [];
+
+for (let i = 1; i <= 11; i++) {
+    const img = new Image();
+    img.src = 'public/tablet' + i + '.png';
+    tabletFrames[i] = img;
+}
+
 function animate() {
     const delta = clock.getDelta();
 
@@ -486,9 +495,7 @@ function animate() {
         });
     }
 
-    var tablet = document.getElementById('tablet');
-    var image = 'public/tablet' + Math.floor(Math.min(Math.max(tabletImageIndex, 1), 11)) + '.png';
-    tablet.src = image;
+    tablet.src = tabletFrames[Math.floor(Math.min(Math.max(tabletImageIndex, 1), 11))].src;
 
     if (!tabletOpen && tabletImageIndex > 1) {
         tabletImageIndex -= delta * 30;
