@@ -30,17 +30,17 @@ const gameNames = [
     "Five Laps at Freddy's",
 
     "JR's",
-    "Glitched Attraction",
-    "Joy of Creation",
+    "The Glitched Attraction",
+    "The Joy of Creation",
     "A Bite at Freddy's",
-    "Chica's Party World",
-    "Five Nights at Flumpty's",
-    "Playtime at Percy's",
-    "Five Nights at Candy's 1 Remake",
-    "SCP: Endurance",
+    "Five Nights at Chica's Party World",
+    "One Night at Flumpty's",
+    "Playtime with Percy",
+    "Five Nights at Candy's Remastered",
+    "SCP: The Endurance",
     "Oblitus Casa",
     "Tealerland",
-    "Wario's 3"
+    "Five Nights At Wario's 3"
 ];
 
 const gameLogos = [
@@ -67,17 +67,34 @@ const gameLogos = [
     "game-thumbnails/021-freddy-in-space-3.png",
     "game-thumbnails/022-help-wanted-2.png",
     "game-thumbnails/023-into-the-pit.png",
-    "game-thumbnails/024-five-laps-at-freddys.png"
+    "game-thumbnails/024-five-laps-at-freddys.png",
+
+	"game-thumbnails/025-jrs.png",
+	"game-thumbnails/026-the-glitched-attraction.png",
+	"game-thumbnails/027-the-joy-of-creation.webp",
+	"game-thumbnails/028-a-bite-at-freddys.png",
+	"game-thumbnails/029-chicas-party-world.webp",
+	"game-thumbnails/030-one-night-at-flumptys.webp",
+	"game-thumbnails/031-playtime-with-percy.webp",
+	"game-thumbnails/032-five-nights-at-candys-remastered.png",
+	"game-thumbnails/033-scp-endurance.png",
+	"game-thumbnails/034-oblitus-casa.png",
+	"game-thumbnails/035-tealerland.png",
+	"game-thumbnails/036-five-nights-at-warios-3.png",
 ];
 
 const presetNames = [
-    "Marathon 5",
-    "Fangame Marathon 1"
+	"All",
+	"None",
+    	"Marathon 5",
+    	"Fangame Marathon 1"
 ];
 
 const presets = [
-    [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
-    [ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+	[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
+	[ ],
+    	[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
+    	[ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
 ];
 
 var gameInPool = Array(gameNames.length).fill(false);
@@ -342,6 +359,33 @@ presetNames.forEach((val) => {
     gameButtons.appendChild(clone);
     clone.style.visibility = "inherit";
     clone.getElementsByClassName("game-name")[0].innerText = val;
+
+    clone.onclick = function(event) {
+        var presetIndex = presetNames.indexOf(val);
+        var presetArray = presets[presetIndex];
+
+	gameInPool = Array(gameNames.length).fill(false);
+
+	for (var i = 0; i < presetArray.length; i++)
+	{
+		gameInPool[presetArray[i]] = true;
+	}
+
+	for (var i = 0; i < gameNames.length; i++)
+	{
+		var game = document.getElementById(gameNames[i]);
+        	var checkbox = game.getElementsByClassName("game-checkbox")[0];
+
+		if (gameInPool[i])
+		{
+			checkbox.src = "public/checkbox-on.png";
+		}
+		else
+		{
+			checkbox.src = "public/checkbox-off.png";
+		}
+	}
+    };
 });
 
 var removeButton = document.getElementById('remove-button');

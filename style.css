@@ -146,6 +146,7 @@ canvas {
     padding: 2px;
     z-index: 2;
     position: relative;
+    cursor: pointer;
 }
 
 .game p {
