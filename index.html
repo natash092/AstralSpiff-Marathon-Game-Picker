@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,11 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="icon" type="image/x-icon" href="public/favicon.png">
 </head>
+
 <body>
-	
-<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
-<script type="importmap">
+
+	<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+	<script type="importmap">
 	{
 	  "imports": {
 		"three": "https://cdn.jsdelivr.net/npm/three@0.176.0/build/three.module.js",
@@ -19,76 +21,77 @@
 	  }
 	}
 </script>
-<script type="module" src="./main.js"></script>
+	<script type="module" src="./main.js"></script>
 
 
 
-<div id="container">
-	<svg id="clickable-area">
-		<rect width="100%" height="100%" />
-	</svg>
-	
-	<div id="settings-toggle">
-		<svg>
+	<div id="container">
+		<svg id="clickable-area">
 			<rect width="100%" height="100%" />
 		</svg>
-		
-		<div id="settings-text">SETTINGS</div>
-	</div>
 
-	<canvas id="three-canvas"></canvas>
-	
-	<div id="settings-panel">
-		<img src="public/tablet1.png" id="tablet"/>
-		<div class="inner-tablet-holder">
-			<div id="inner-tablet" style="visibility: hidden">
-				<div id="game-buttons">
-					<div class="game-button" style="visibility: hidden" id="game-button-template">
-						<p class="game-name">BUTTON NAME</p>
+		<div id="settings-toggle">
+			<svg>
+				<rect width="100%" height="100%" />
+			</svg>
+
+			<div id="settings-text">SETTINGS</div>
+		</div>
+
+		<canvas id="three-canvas"></canvas>
+
+		<div id="settings-panel">
+			<img src="public/tablet1.png" id="tablet" />
+			<div class="inner-tablet-holder">
+				<div id="inner-tablet" style="visibility: hidden">
+					<div id="game-buttons">
+						<div class="game-button" style="visibility: hidden" id="game-button-template">
+							<p class="game-name">BUTTON NAME</p>
+						</div>
 					</div>
+
+					<div class="game" style="visibility: hidden" id="game-template">
+						<p class="game-name">GAME NAME</p>
+						<img src="public/checkbox-on.png" class="game-checkbox" />
+					</div>
+
+					<img id="ascii-art" src="public/ascii-art.png" />
+				</div>
+			</div>
+		</div>
+
+		<div id="result-screen" style="visibility: hidden">
+			<div id="result-screen-center">
+				<img class="result-screen-bg" src="public/gradient.png">
+				<img id="result-screen-logo">
+
+				<div id="result-screen-title">
+
 				</div>
 
-				<div class="game" style="visibility: hidden" id="game-template">
-					<p class="game-name">GAME NAME</p>
-					<img src="public/checkbox-on.png" class="game-checkbox" />
-				</div>
+				<div id="button-container">
+					<div class="result-button" id="remove-button">
+						<svg>
+							<rect width="100%" height="100%" />
+						</svg>
 
-				<img id="ascii-art" src="public/ascii-art.png" />
+						<p>REMOVE</p>
+					</div>
+
+
+					<div class="result-button" id="ignore-button">
+						<svg>
+							<rect width="100%" height="100%" />
+						</svg>
+
+						<p>KEEP</p>
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<div id="result-screen" style="visibility: hidden">
-		<div id="result-screen-center">
-			<img class="result-screen-bg" src="public/gradient.png">
-			<img id="result-screen-logo">
-
-			<div id="result-screen-title">
-				
-			</div>
-			
-			<div id="button-container">
-				<div class="result-button" id="remove-button">
-					<svg>
-						<rect width="100%" height="100%" />
-					</svg>
-					
-					<p>REMOVE</p>
-				</div>
-				
-
-				<div class="result-button" id="ignore-button">
-					<svg>
-						<rect width="100%" height="100%" />
-					</svg>
-					
-					<p>KEEP</p>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
 
 </body>
+
 </html>

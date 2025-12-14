@@ -4,70 +4,70 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 var fangameIndex = 24;
 
 const gameNames = [
-    "FNAF 1",
-    "FNAF 2",
-    "FNAF 3 (Troll)",
-    "FNAF 3",
-    "FNAF 4",
-    "FNAF World (Troll)",
-    "FNAF World",
-    "FNAF World DLC",
-    "Sister Location (Troll)",
-    "Sister Location",
-    "Sister Location Custom Night",
-    "Freddy Fazbear's Pizzeria Simulator",
-    "Ultimate Custom Night (Troll)",
-    "Ultimate Custom Night",
-    "Help Wanted",
-    "Help Wanted: Curse of Dreadbear",
-    "Freddy in Space 2",
-    "Security Breach: Fury's Rage",
-    "Security Breach",
-    "Security Breach: Ruin",
-    "Freddy in Space 3",
-    "Help Wanted 2",
-    "Into The Pit",
-    "Five Laps at Freddy's",
+	"FNAF 1",
+	"FNAF 2",
+	"FNAF 3 (Troll)",
+	"FNAF 3",
+	"FNAF 4",
+	"FNAF World (Troll)",
+	"FNAF World",
+	"FNAF World DLC",
+	"Sister Location (Troll)",
+	"Sister Location",
+	"Sister Location Custom Night",
+	"Freddy Fazbear's Pizzeria Simulator",
+	"Ultimate Custom Night (Troll)",
+	"Ultimate Custom Night",
+	"Help Wanted",
+	"Help Wanted: Curse of Dreadbear",
+	"Freddy in Space 2",
+	"Security Breach: Fury's Rage",
+	"Security Breach",
+	"Security Breach: Ruin",
+	"Freddy in Space 3",
+	"Help Wanted 2",
+	"Into The Pit",
+	"Five Laps at Freddy's",
 
-    "JR's",
-    "The Glitched Attraction",
-    "The Joy of Creation",
-    "A Bite at Freddy's",
-    "Five Nights at Chica's Party World",
-    "One Night at Flumpty's",
-    "Playtime with Percy",
-    "Five Nights at Candy's Remastered",
-    "SCP: The Endurance",
-    "Oblitus Casa",
-    "Tealerland",
-    "Five Nights At Wario's 3"
+	"JR's",
+	"The Glitched Attraction",
+	"The Joy of Creation",
+	"A Bite at Freddy's",
+	"Five Nights at Chica's Party World",
+	"One Night at Flumpty's",
+	"Playtime with Percy",
+	"Five Nights at Candy's Remastered",
+	"SCP: The Endurance",
+	"Oblitus Casa",
+	"Tealerland",
+	"Five Nights At Wario's 3"
 ];
 
 const gameLogos = [
-    "game-thumbnails/001-fnaf-1.png",
-    "game-thumbnails/002-fnaf-2.png",
-    "game-thumbnails/003-fnaf-3-troll.png",
-    "game-thumbnails/004-fnaf-3.png",
-    "game-thumbnails/005-fnaf-4.png",
-    "game-thumbnails/006-fnaf-world-troll.png",
-    "game-thumbnails/007-fnaf-world.png",
-    "game-thumbnails/008-fnaf-world-dlc.png",
-    "game-thumbnails/009-sister-location-troll.png",
-    "game-thumbnails/010-sister-location.png",
-    "game-thumbnails/011-sister-location-custom-night.png",
-    "game-thumbnails/012-pizza-sim.png",
-    "game-thumbnails/013-ucn-troll.png",
-    "game-thumbnails/014-ucn.png",
-    "game-thumbnails/015-help-wanted.png",
-    "game-thumbnails/016-dreadbear.png",
-    "game-thumbnails/017-freddy-in-space-2.png",
-    "game-thumbnails/018-furys-rage.png",
-    "game-thumbnails/019-security-breach.png",
-    "game-thumbnails/020-ruin.png",
-    "game-thumbnails/021-freddy-in-space-3.png",
-    "game-thumbnails/022-help-wanted-2.png",
-    "game-thumbnails/023-into-the-pit.png",
-    "game-thumbnails/024-five-laps-at-freddys.png",
+	"game-thumbnails/001-fnaf-1.png",
+	"game-thumbnails/002-fnaf-2.png",
+	"game-thumbnails/003-fnaf-3-troll.png",
+	"game-thumbnails/004-fnaf-3.png",
+	"game-thumbnails/005-fnaf-4.png",
+	"game-thumbnails/006-fnaf-world-troll.png",
+	"game-thumbnails/007-fnaf-world.png",
+	"game-thumbnails/008-fnaf-world-dlc.png",
+	"game-thumbnails/009-sister-location-troll.png",
+	"game-thumbnails/010-sister-location.png",
+	"game-thumbnails/011-sister-location-custom-night.png",
+	"game-thumbnails/012-pizza-sim.png",
+	"game-thumbnails/013-ucn-troll.png",
+	"game-thumbnails/014-ucn.png",
+	"game-thumbnails/015-help-wanted.png",
+	"game-thumbnails/016-dreadbear.png",
+	"game-thumbnails/017-freddy-in-space-2.png",
+	"game-thumbnails/018-furys-rage.png",
+	"game-thumbnails/019-security-breach.png",
+	"game-thumbnails/020-ruin.png",
+	"game-thumbnails/021-freddy-in-space-3.png",
+	"game-thumbnails/022-help-wanted-2.png",
+	"game-thumbnails/023-into-the-pit.png",
+	"game-thumbnails/024-five-laps-at-freddys.png",
 
 	"game-thumbnails/025-jrs.png",
 	"game-thumbnails/026-the-glitched-attraction.png",
@@ -89,20 +89,20 @@ const presetNames = [
 	"Marathon 1 + 2",
 	"Marathon 3",
 	"Marathon 4",
-    	"Marathon 5",
-    	"Fangame Marathon 1"
+	"Marathon 5",
+	"Fangame Marathon 1"
 ];
 
 const presets = [
-	[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ],
-	[ ],
+	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+	[],
 
-	[ 0, 1, 3, 4, 6, 9, 11, 13, 14, 18 ],
-	[ 0, 1, 3, 4, 6, 9, 11, 13, 14, 16, 17, 18 ],
-	[ 0, 1, 3, 4, 6, 7, 9, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21 ],
-    	[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23 ],
+	[0, 1, 3, 4, 6, 9, 11, 13, 14, 18],
+	[0, 1, 3, 4, 6, 9, 11, 13, 14, 16, 17, 18],
+	[0, 1, 3, 4, 6, 7, 9, 11, 13, 14, 15, 16, 17, 18, 19, 20, 21],
+	[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
 
-    	[ 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35 ]
+	[24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
 ];
 
 var gameInPool = Array(gameNames.length).fill(false);
@@ -193,7 +193,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const container = document.getElementById('container');
 
 const canvas = document.getElementById('three-canvas');
-const renderer = new THREE.WebGLRenderer( { canvas: canvas});
+const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setAnimationLoop(animate);
@@ -204,7 +204,7 @@ window.addEventListener('resize', onWindowResize);
 const clock = new THREE.Clock();
 
 var settingsButton = document.getElementById('settings-toggle');
-settingsButton.onclick = function(event) { toggleTabletOpen()}
+settingsButton.onclick = function (event) { toggleTabletOpen() }
 
 const mesh = new THREE.Mesh(new THREE.PlaneGeometry(2000, 2000), new THREE.MeshPhongMaterial({ color: 0x404040, depthWrite: false }));
 mesh.rotation.x = - Math.PI / 2;
@@ -231,28 +231,28 @@ createGiftBox(-300, 57, -120, 56, false);
 createGiftBox(120, 57, -170, -23, false);
 
 function createGiftBox(x, y, z, rot, isMain) {
-    loader.load("public/lidia.glb", (glb) => {
-        var fbx = glb.scene;
-        fbx.scale.setScalar(1000);
-        fbx.position.set(x, y, z);
-        //fbx.setRotationFromAxisAngle((0, 1, 0), rot);
-        fbx.rotateY(rot * 0.0174533);
+	loader.load("public/lidia.glb", (glb) => {
+		var fbx = glb.scene;
+		fbx.scale.setScalar(1000);
+		fbx.position.set(x, y, z);
+		//fbx.setRotationFromAxisAngle((0, 1, 0), rot);
+		fbx.rotateY(rot * 0.0174533);
 
-        fbx.traverse(function (object) {
-            object.castShadow = true;
-            object.receiveShadow = true;
-        });
+		fbx.traverse(function (object) {
+			object.castShadow = true;
+			object.receiveShadow = true;
+		});
 
-        if (isMain) {
-            mixer = new THREE.AnimationMixer(glb.scene);
-            windAnim = mixer.clipAction(glb.animations[0]);
-            windAnim.loop = THREE.LoopOnce;
-            windAnim.timeScale = 2;
-            windAnim.clampWhenFinished = true;
-        }
+		if (isMain) {
+			mixer = new THREE.AnimationMixer(glb.scene);
+			windAnim = mixer.clipAction(glb.animations[0]);
+			windAnim.loop = THREE.LoopOnce;
+			windAnim.timeScale = 2;
+			windAnim.clampWhenFinished = true;
+		}
 
-        scene.add(fbx);
-    });
+		scene.add(fbx);
+	});
 }
 
 camera.position.y = 110;
@@ -266,55 +266,55 @@ var openAmount = 300;
 var canWind = true;
 var windAudio;
 clickContainer.addEventListener("pointerdown", (event) => {
-    mouseDown = true;
+	mouseDown = true;
 
-    if (canWind && windAnim && !tabletOpen) {
+	if (canWind && windAnim && !tabletOpen) {
 
-        // pick a random game
-        currentGameIndex = getRandomInt(0, gameNames.length - 1);
+		// pick a random game
+		currentGameIndex = getRandomInt(0, gameNames.length - 1);
 
-        var availableGames = gameInPool.filter(el => el == true).length;
+		var availableGames = gameInPool.filter(el => el == true).length;
 
-        if (availableGames == 0) {
-            return;
-        }
+		if (availableGames == 0) {
+			return;
+		}
 
-        while (!gameInPool[currentGameIndex]) {
-            currentGameIndex = getRandomInt(0, gameNames.length - 1);
-        }
+		while (!gameInPool[currentGameIndex]) {
+			currentGameIndex = getRandomInt(0, gameNames.length - 1);
+		}
 
-        document.getElementById('result-screen-logo').src = "public/" + gameLogos[currentGameIndex];
-        document.getElementById('result-screen-title').innerText = gameNames[currentGameIndex];
+		document.getElementById('result-screen-logo').src = "public/" + gameLogos[currentGameIndex];
+		document.getElementById('result-screen-title').innerText = gameNames[currentGameIndex];
 
-        if (windAudio) {
-            windAudio.pause();
-        }
+		if (windAudio) {
+			windAudio.pause();
+		}
 
-        windAudio = new Audio(getRandomWindNoise());
-        windAudio.volume = 0.5;
-        windAudio.play();
+		windAudio = new Audio(getRandomWindNoise());
+		windAudio.volume = 0.5;
+		windAudio.play();
 
-        windAnim.time = 0;
-        windAnim.play();
+		windAnim.time = 0;
+		windAnim.play();
 
-        openAmount = getRandomFloat(3, 5);
-    }
+		openAmount = getRandomFloat(3, 5);
+	}
 });
 
 clickContainer.addEventListener("pointerup", (event) => {
-    mouseDown = false;
-    windAmount = 0;
+	mouseDown = false;
+	windAmount = 0;
 
-    if (canWind) {
-        // we're still winding rn
-        if (windAudio) {
-            windAudio.pause();
-        }
+	if (canWind) {
+		// we're still winding rn
+		if (windAudio) {
+			windAudio.pause();
+		}
 
-        if (windAnim) {
-            windAnim.stop();
-        }
-    }
+		if (windAnim) {
+			windAnim.stop();
+		}
+	}
 });
 
 var tabletImageIndex = 1;
@@ -325,75 +325,70 @@ var gameButtons = document.getElementById('game-buttons');
 var checkIndex = 0;
 gameNames.forEach((val) => {
 
-    if (checkIndex == fangameIndex)
-    {
-        var template = document.getElementById("game-template");
-        var clone = template.cloneNode(true);
-        innerTablet.appendChild(clone);
-        clone.style.visibility = "hidden";
-    }
+	if (checkIndex == fangameIndex) {
+		var template = document.getElementById("game-template");
+		var clone = template.cloneNode(true);
+		innerTablet.appendChild(clone);
+		clone.style.visibility = "hidden";
+	}
 
-    checkIndex++;
+	checkIndex++;
 
-    var template = document.getElementById("game-template");
-    var clone = template.cloneNode(true);
-    clone.id = val;
-    innerTablet.appendChild(clone);
-    clone.style.visibility = "inherit";
-    clone.getElementsByClassName("game-name")[0].innerText = val;
+	var template = document.getElementById("game-template");
+	var clone = template.cloneNode(true);
+	clone.id = val;
+	innerTablet.appendChild(clone);
+	clone.style.visibility = "inherit";
+	clone.getElementsByClassName("game-name")[0].innerText = val;
 
-    var checkbox = clone.getElementsByClassName("game-checkbox")[0];
-    checkbox.src = "public/checkbox-off.png";
+	var checkbox = clone.getElementsByClassName("game-checkbox")[0];
+	checkbox.src = "public/checkbox-off.png";
 
-    checkbox.onclick = function(event) {
+	checkbox.onclick = function (event) {
 
-        var gameIndex = gameNames.indexOf(val);
+		var gameIndex = gameNames.indexOf(val);
 
-        var isActive = gameInPool[gameIndex];
-        gameInPool[gameIndex] = !isActive;
+		var isActive = gameInPool[gameIndex];
+		gameInPool[gameIndex] = !isActive;
 
-        if (isActive) {
-            checkbox.src = "public/checkbox-off.png";
-        } else {
-            checkbox.src = "public/checkbox-on.png";
-        }
-    };
+		if (isActive) {
+			checkbox.src = "public/checkbox-off.png";
+		} else {
+			checkbox.src = "public/checkbox-on.png";
+		}
+	};
 });
 
 presetNames.forEach((val) => {
-    var template = document.getElementById("game-button-template");
-    var clone = template.cloneNode(true);
-    clone.id = val;
-    gameButtons.appendChild(clone);
-    clone.style.visibility = "inherit";
-    clone.getElementsByClassName("game-name")[0].innerText = val;
+	var template = document.getElementById("game-button-template");
+	var clone = template.cloneNode(true);
+	clone.id = val;
+	gameButtons.appendChild(clone);
+	clone.style.visibility = "inherit";
+	clone.getElementsByClassName("game-name")[0].innerText = val;
 
-    clone.onclick = function(event) {
-        var presetIndex = presetNames.indexOf(val);
-        var presetArray = presets[presetIndex];
+	clone.onclick = function (event) {
+		var presetIndex = presetNames.indexOf(val);
+		var presetArray = presets[presetIndex];
 
-	gameInPool = Array(gameNames.length).fill(false);
+		gameInPool = Array(gameNames.length).fill(false);
 
-	for (var i = 0; i < presetArray.length; i++)
-	{
-		gameInPool[presetArray[i]] = true;
-	}
-
-	for (var i = 0; i < gameNames.length; i++)
-	{
-		var game = document.getElementById(gameNames[i]);
-        	var checkbox = game.getElementsByClassName("game-checkbox")[0];
-
-		if (gameInPool[i])
-		{
-			checkbox.src = "public/checkbox-on.png";
+		for (var i = 0; i < presetArray.length; i++) {
+			gameInPool[presetArray[i]] = true;
 		}
-		else
-		{
-			checkbox.src = "public/checkbox-off.png";
+
+		for (var i = 0; i < gameNames.length; i++) {
+			var game = document.getElementById(gameNames[i]);
+			var checkbox = game.getElementsByClassName("game-checkbox")[0];
+
+			if (gameInPool[i]) {
+				checkbox.src = "public/checkbox-on.png";
+			}
+			else {
+				checkbox.src = "public/checkbox-off.png";
+			}
 		}
-	}
-    };
+	};
 });
 
 var removeButton = document.getElementById('remove-button');
@@ -403,11 +398,11 @@ removeButton.onclick = function (event) { buttonPressed(true); };
 keepButton.onclick = function (event) { buttonPressed(false); };
 
 for (var i = 1; i < 12; i++) {
-    preloadImage('public/tablet' + i + '.png');
+	preloadImage('public/tablet' + i + '.png');
 }
 
 for (var i = 1; i < 9; i++) {
-    preloadAudio('public/wind' + i + '.mp3');
+	preloadAudio('public/wind' + i + '.mp3');
 }
 
 preloadAudio('public/open.mp3');
@@ -416,142 +411,140 @@ preloadAudio('public/close.ogg');
 
 var currentGameIndex;
 function buttonPressed(remove) {
-    if (remove) {
-        gameInPool[currentGameIndex] = false;
+	if (remove) {
+		gameInPool[currentGameIndex] = false;
 
-        var game = document.getElementById(gameNames[currentGameIndex]);
-        var checkbox = game.getElementsByClassName("game-checkbox")[0];
-        checkbox.src = "public/checkbox-off.png";
-    }
+		var game = document.getElementById(gameNames[currentGameIndex]);
+		var checkbox = game.getElementsByClassName("game-checkbox")[0];
+		checkbox.src = "public/checkbox-off.png";
+	}
 
-    canWind = true;
-    windAmount = 0;
-    mouseDown = false;
-    windAnim.timeScale = 2;
-    windAnim.reset();
-    windAnim.stop();
+	canWind = true;
+	windAmount = 0;
+	mouseDown = false;
+	windAnim.timeScale = 2;
+	windAnim.reset();
+	windAnim.stop();
 
-    document.getElementById('result-screen').style.visibility = "hidden";
+	document.getElementById('result-screen').style.visibility = "hidden";
 }
 
 const tablet = document.getElementById('tablet');
 const tabletFrames = [];
 
 for (let i = 1; i <= 11; i++) {
-    const img = new Image();
-    img.src = 'public/tablet' + i + '.png';
-    tabletFrames[i] = img;
+	const img = new Image();
+	img.src = 'public/tablet' + i + '.png';
+	tabletFrames[i] = img;
 }
 
 function animate() {
-    const delta = clock.getDelta();
+	const delta = clock.getDelta();
 
-    // update animations
-    if (mixer) {
-        mixer.update(delta);
-    }
+	// update animations
+	if (mixer) {
+		mixer.update(delta);
+	}
 
-    renderer.render(scene, camera);
+	renderer.render(scene, camera);
 
-    // update wind timer
-    if (windAnim && canWind) {
-        if (mouseDown) {
-            windAmount += delta;
-        } else {
-            windAmount = 0;
-        }
+	// update wind timer
+	if (windAnim && canWind) {
+		if (mouseDown) {
+			windAmount += delta;
+		} else {
+			windAmount = 0;
+		}
 
-        if (windAnim.time >= 4) {
-            windAnim.time = 0.2;
-        }
-    }
+		if (windAnim.time >= 4) {
+			windAnim.time = 0.2;
+		}
+	}
 
-    camera.position.z = 300 - windAmount * 20;
-    spotLightFive.intensity = windAmount * 500000;
-    camera.fov = 75 + windAmount * 4;
-    camera.updateProjectionMatrix();
+	camera.position.z = 300 - windAmount * 20;
+	spotLightFive.intensity = windAmount * 500000;
+	camera.fov = 75 + windAmount * 4;
+	camera.updateProjectionMatrix();
 
-    if (windAmount >= openAmount) {
-        // open box
-        canWind = false;
-        windAmount = 0;
+	if (windAmount >= openAmount) {
+		// open box
+		canWind = false;
+		windAmount = 0;
 
-        var openAudio = new Audio('public/open.mp3');
-        openAudio.volume = 0.5;
-        openAudio.play();
-        windAudio.pause();
+		var openAudio = new Audio('public/open.mp3');
+		openAudio.volume = 0.5;
+		openAudio.play();
+		windAudio.pause();
 
-        // go to box open part of animation
-        windAnim.time = 4.5;
-        windAnim.timeScale = 15;
+		// go to box open part of animation
+		windAnim.time = 4.5;
+		windAnim.timeScale = 15;
 
-        document.getElementById('result-screen').style.visibility = "visible";
+		document.getElementById('result-screen').style.visibility = "visible";
 
-        confetti({
-            particleCount: 200,
-            spread: 90,
-            origin: { y: 1 },
-            startVelocity: 75
-        });
-    }
+		confetti({
+			particleCount: 200,
+			spread: 90,
+			origin: { y: 1 },
+			startVelocity: 75
+		});
+	}
 
-    tablet.src = tabletFrames[Math.floor(Math.min(Math.max(tabletImageIndex, 1), 11))].src;
+	tablet.src = tabletFrames[Math.floor(Math.min(Math.max(tabletImageIndex, 1), 11))].src;
 
-    if (!tabletOpen && tabletImageIndex > 1) {
-        tabletImageIndex -= delta * 30;
-    }
+	if (!tabletOpen && tabletImageIndex > 1) {
+		tabletImageIndex -= delta * 30;
+	}
 
-    if (tabletOpen && tabletImageIndex < 11) {
-        tabletImageIndex += delta * 30;
-    }
+	if (tabletOpen && tabletImageIndex < 11) {
+		tabletImageIndex += delta * 30;
+	}
 
-    var innerTablet = document.getElementById('inner-tablet');
-    if (tabletImageIndex >= 11) {
-        innerTablet.style.visibility = "visible";
-    } else {
-        innerTablet.style.visibility = "hidden";
-    }
+	var innerTablet = document.getElementById('inner-tablet');
+	if (tabletImageIndex >= 11) {
+		innerTablet.style.visibility = "visible";
+	} else {
+		innerTablet.style.visibility = "hidden";
+	}
 }
 
 function onWindowResize() {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize(window.innerWidth, window.innerHeight);
 }
 
 function getRandomWindNoise() {
-    let index = getRandomInt(1, 8);
-    return `public/wind${index}.mp3`;
+	let index = getRandomInt(1, 8);
+	return `public/wind${index}.mp3`;
 }
 
 function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function getRandomFloat(min, max) {
-    return Math.random() * (max - min) + min;
+	return Math.random() * (max - min) + min;
 }
 
 function toggleTabletOpen() {
-    tabletOpen = !tabletOpen;
+	tabletOpen = !tabletOpen;
 
-    if (tabletOpen) {
-        new Audio('public/open.ogg').play();
-    }
-    else
-    {
-        new Audio('public/close.ogg').play();
-    }
+	if (tabletOpen) {
+		new Audio('public/open.ogg').play();
+	}
+	else {
+		new Audio('public/close.ogg').play();
+	}
 }
 
-function preloadImage(url)
-{
-    var img = new Image();
-    img.src=url;
+function preloadImage(url) {
+	var img = new Image();
+	img.src = url;
 }
 
 function preloadAudio(url) {
-    var audio = new Audio(url);
+	var audio = new Audio(url);
 }
