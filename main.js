@@ -44,9 +44,9 @@ const gameNames = [
 ];
 
 const gameLogos = [
-	"game-thumbnails/001-fnaf-1.png",
-	"game-thumbnails/002-fnaf-2.png",
-	"game-thumbnails/003-fnaf-3-troll.png",
+	"game-thumbnails/001-DORM.png",
+	"game-thumbnails/002-fnac-2.png",
+	"game-thumbnails/003-fnac-3.png",
 	"game-thumbnails/004-fnaf-3.png",
 	"game-thumbnails/005-fnaf-4.png",
 	"game-thumbnails/006-fnaf-world-troll.png",
